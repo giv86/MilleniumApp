@@ -1,0 +1,23 @@
+﻿@using MilleniumApp.Resources
+@model MilleniumApp.Models.Person
+
+<div>
+    <table>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.Nickname)
+            </td>
+            <td>
+                @Html.DisplayFor(m => m.Nickname)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(m => m.EmailAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(m => m.EmailAddress)
+            </td>
+        </tr>
+    </table>
+</div>

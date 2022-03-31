@@ -1,0 +1,40 @@
+﻿@using MilleniumApp.Resources
+@model MilleniumApp.Models.Person
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<div>
+    @using (Html.BeginForm("index", "home"))
+    {
+        <table>
+            <tr>
+                <td>
+                    @Html.LabelFor(m=>m.Nickname)
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.Nickname)
+                    @Html.ValidationMessageFor(m => m.Nickname, "*")
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.EmailAddress)
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.EmailAddress)
+                    @Html.ValidationMessageFor(m => m.EmailAddress, "*")
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <input type="submit" value="save" />
+                    @Html.ValidationSummary()
+                </td>
+            </tr>
+        </table>
+    }
+</div>
